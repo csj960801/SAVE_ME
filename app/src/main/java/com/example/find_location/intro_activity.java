@@ -3,12 +3,10 @@ package com.example.find_location;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Window;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+// github 토큰 : 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
 public class intro_activity extends AppCompatActivity {
 
     @Override
@@ -18,13 +16,14 @@ public class intro_activity extends AppCompatActivity {
 
         Handler handler = new Handler();
         handler.postDelayed(() -> {
+
             // 일종의 메시지 객체. 즉, 각각의 액티비티 및 앱 구성요소에 작업요청을 하는 역할
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
             // 인트로 실행 후 바로 MainActivity로 넘어감.
             startActivity(intent);
             finish();
-        }, 3000); //3초 후 인트로 실행
+        }, 900); //3초 후 인트로 실행
 
     }// end of onCreate
 

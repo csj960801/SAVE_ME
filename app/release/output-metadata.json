@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.find_location",
+  "applicationId": "com.tanxe.find_location",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 1,
-      "versionName": "1.0",
+      "versionCode": 9,
+      "versionName": "9",
       "outputFile": "app-release.apk"
     }
   ],

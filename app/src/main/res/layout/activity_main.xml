@@ -6,27 +6,14 @@
     android:layout_height="match_parent"
     android:background="@drawable/background1"
     tools:context=".MainActivity">
-    <!-- 위치 파악 버튼 -->
-    <Button
-        android:id="@+id/location_btn"
-        android:layout_width="309dp"
-        android:layout_height="76dp"
-        android:gravity="center"
-        android:text="Send My Location"
-        app:layout_constraintBottom_toTopOf="@+id/txtResult"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/urgent_btn"
-        app:layout_constraintVertical_bias="0.5"
-        tools:ignore="MissingConstraints" />
 
     <!-- 전화 버튼 -->
     <Button
         android:id="@+id/urgent_btn"
         android:layout_width="309dp"
         android:layout_height="76dp"
-        android:text="Emergency call"
+        android:text="Emergency Call"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/location_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -35,6 +22,38 @@
         app:layout_constraintVertical_bias="0.5"
         tools:ignore="MissingConstraints" />
 
+    <!-- 위치 파악 버튼 -->
+    <Button
+        android:id="@+id/location_btn"
+        android:layout_width="309dp"
+        android:layout_height="76dp"
+        android:gravity="center"
+        android:text="Send My Information"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/camera_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/urgent_btn"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/camera_btn"
+        android:layout_width="309dp"
+        android:layout_height="76dp"
+        android:gravity="center"
+        android:text="Take Pictures"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="MissingConstraints" />
+
+    <!-- gps 정보 출력 TextView -->
     <TextView
         android:id="@+id/txtResult"
         android:layout_width="410dp"
@@ -42,12 +61,27 @@
         android:gravity="center"
         android:text=""
         android:textColor="@color/white"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
+        app:layout_constraintVertical_bias="0.589"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 배경 및 버튼 색상 변경 switch-->
+    <Switch
+        android:id="@+id/background_switch"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:switchMinWidth="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        app:layout_constraintVertical_bias="0.498"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
